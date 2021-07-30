@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSP7 ERP: Acceso Denegado</title>
+    <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
+</head>
+<style>
+    body {
+        background: #00222d;  /* fallback for old browsers */
+        background: -webkit-linear-gradient(to right, #161616, #00222d);  /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to right, #161616, #00222d); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        color: white;
+        font-family: Titillium Web,sans-serif;
+        margin: 0px;
+        padding: 0px;
+    }
+    .header {
+        box-sizing: border-box;
+        background-color: rgba(0,0,0,.87);
+        font-size: 16px;
+        height: 100px;
+        line-height: 27px;
+        overflow: hidden;
+        width: 100%;
+    }
+    .header__img {
+        padding-left: 40px;
+        padding-top: 15px;
+        width: 200px;
+    }
+    .main {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .main__img {
+        height: 150px;
+    }
+    .footer {
+        background-color: rgba(0,0,0,0.5);
+        bottom: 0px;
+        box-sizing: border-box;
+        height: 70px;
+        position: absolute;
+        text-align: center;
+        width: 100%;
+    }
+    .footer p {
+        padding-top: 10px;
+    }
+    .footer a {
+        color: white;
+        text-decoration: none;
+    }
+    .footer a:hover {
+        text-decoration: underline;
+    }
+</style>
+<body>
+    <header class="header">
+        <img class="header__img" src="http://www.aspsols.com/AspSolutionsPage2016/resources/landingpage-assets/images/logo.png" alt="ASP Solutions Logo">
+    </header>
+    <main class="main">
+        <h2>Acceso Denegado</h2>
+        <img class="main__img" src="https://dl.dropboxusercontent.com/s/7l35sxioocinn3o/DeniedShieldRed.png" alt="Access Denied Image"/>
+        <p>Nuestro sistema no registra pago por los servicios prestados del ERP JSP7 Web.</p>
+    </main>
+    <footer class="footer">
+        <p>Copyright © <label id="anho"></label> <a href="https://www.aspsols.com/home">ASP Solutions S.A.S.</a> All Rights Reserved</p>
+    </footer>
+</body>
+<script>
+    let year = (new Date).getFullYear();
+    document.getElementById('anho').innerHTML = String(year);
+</script>
+</html>
