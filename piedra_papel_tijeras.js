@@ -2,31 +2,36 @@ const Piedra = "piedra";
 const Papel = "papel";
 const Tijeras = "tijeras";
 
-let eleccion = Papel;
-let eleccion_maq = Tijeras;
-
-if (eleccion == Piedra) {
-    if (eleccion_maq == Papel){
-        console.log(eleccion+" pierde contra "+eleccion_maq);
-    }else if (eleccion_maq == Tijeras){
-        console.log(eleccion+" gana contra "+eleccion_maq);
-    }else{
-        console.log("empate");
+function valida_eleccion(eleccion, eleccion_maq){
+    let resultado = "";
+    if (eleccion == Piedra) {
+        if (eleccion_maq == Papel){
+            resultado = eleccion+" pierde contra "+eleccion_maq;
+        }else if (eleccion_maq == Tijeras){
+            resultado = eleccion+" gana contra "+eleccion_maq;
+        }else{
+            resultado = "empate";
+        }
+    }else if (eleccion == Papel){
+        if (eleccion_maq == Tijeras){
+            resultado = eleccion+" pierde contra "+eleccion_maq;
+        }else if (eleccion_maq == Piedra){
+            resultado = eleccion+" gana contra "+eleccion_maq;
+        }else{
+            resultado = "empate";
+        }
+    }else if (eleccion == Tijeras){
+        if (eleccion_maq == Piedra){
+            resultado = eleccion+" pierde contra "+eleccion_maq;
+        }else if (eleccion_maq == Papel){
+            resultado = eleccion+" gana contra "+eleccion_maq;
+        }else{
+            resultado = "empate";
+        }
+    }else {
+        resultado = eleccion+" no es una elección valida.";
     }
-}else if (eleccion == Papel){
-    if (eleccion_maq == Tijeras){
-        console.log(eleccion+" pierde contra "+eleccion_maq);
-    }else if (eleccion_maq == Piedra){
-        console.log(eleccion+" gana contra "+eleccion_maq);
-    }else{
-        console.log("empate");
-    }
-}else if (eleccion == Tijeras){
-    if (eleccion_maq == Piedra){
-        console.log(eleccion+" pierde contra "+eleccion_maq);
-    }else if (eleccion_maq == Papel){
-        console.log(eleccion+" gana contra "+eleccion_maq);
-    }else{
-        console.log("empate");
-    }
+    return resultado;
 }
+
+console.log(valida_eleccion(Papel,Tijeras));
