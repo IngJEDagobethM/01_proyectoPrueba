@@ -46,7 +46,7 @@ let num_autos_a_generar = 30;
 let array_autos = [];
 let i;
 for (i = 0; i < num_autos_a_generar; i++) {
-    array_autos[i] = new Auto(marcas[indice_aleatorio(marcas.length-1)],modelos[indice_aleatorio(modelos.length-1)],colores[indice_aleatorio(colores.length-1)]);
+    array_autos.push(new Auto(marcas[indice_aleatorio(marcas.length-1)],modelos[indice_aleatorio(modelos.length-1)],colores[indice_aleatorio(colores.length-1)]));
 }
 
 for (i = 0; i < array_autos.length; i++) {
